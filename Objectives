@@ -1,0 +1,25 @@
+⚙️ Technical Specifications (Phase 1)
+The system is built on an Industrial Edge Computing architecture, designed to survive the harsh dusty environment of a quarry while maintaining 99.9% uptime via Starlink.
+
+1. The Vision Node (Camera)
+Hardware: Reolink Duo 3 PoE (16MP Panoramic).
+
+Function: Provides a 180° ultra-wide view of the driveway, capturing both the license plate (for ID) and the truck bed (for load verification) in a single frame.
+
+Connectivity: 10Gbps Fiber/Copper Backbone via UniFi Enterprise Network.
+
+2. The Compute Node (The Brain)
+Hardware: Raspberry Pi 5 (8GB RAM) encased in an Argon NEO 5 Aluminum Heatsink Case.
+
+Storage: 1TB NVMe SSD (Lexar NM790) for high-speed buffering and long-term offline storage.
+
+Power: Active PoE+ (20W) via UCTRONICS Splitter, eliminating the need for AC wall adapters at the edge.
+
+Software: Custom Python pipeline integrating Google Gemini 1.5 Flash (AI) for image analysis and Google Sheets API for database management.
+
+3. The Evidence Vault (NVR)
+Hardware: Reolink RLN8-410 NVR.
+
+Storage: 8TB WD Purple Surveillance Drive (approx. 40 days of continuous 24/7 16MP recording).
+
+Purpose: Provides a legally admissible, continuous video record of the site, independent of the AI logging system.
